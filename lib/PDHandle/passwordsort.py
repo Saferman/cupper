@@ -60,19 +60,52 @@ def giveScore(p):
     if AlphaNumJudge(p) or AlphaOneSpecialNumJudge(p):
         score += 2 
 
+    return score
+
+def merge(left,right):  
+    result=[]  
+    i,j=0,0  
+    while i<len(left) and j<len(right):  
+        if left[i].score>=right[j].score:  
+            result.append(left[i])  
+            i+=1  
+        else:  
+            result.append(right[j])  
+            j+=1  
+    result+=left[i:]  
+    result+=right[j:]  
+    return result 
+
+def merge_sort(seq):
+    if len(seq)<=1:
+        return seq
+    else:
+        middle = len(seq)/2
+        left = merge_sort(seq[:middle])
+        right =merge_sort(seq[middle:])
+        return merge(left,right)
 
 def sortByScore(passScoreList):
     '''
        冒泡排序时间效率太低了不推荐
-       建议采用归并排序等
+       建议采用归并排序等,诶其实不用自己写算法,python有模块内封装了算法
     '''
-    
+    """
     for i in xrange(0,len(passScoreList)):
         for j in xrange(i+1,len(passScoreList)):
             if passScoreList[j].score > passScoreList[i].score:
                 passScoreList[i],passScoreList[j] = passScoreList[j],passScoreList[i]
         passScoreList[i] = passScoreList[i].password
     return passScoreList
+    """
+    passScoreList = merge_sort(passScoreList)
+
+    #raw_input()
+    for i in xrange(0,len(passScoreList)):
+        passScoreList[i] = passScoreList[i].password
+    return passScoreList
+    
+
     
 
 def passwordsort(passwordlist,PL=None):
@@ -80,13 +113,14 @@ def passwordsort(passwordlist,PL=None):
        按照这个密码被用户使用的可能性大小排序
        返回排完序的密码列表
     '''
-
+   
     for i in xrange(0,len(passwordlist)):
         p=passScore()
         p.password=passwordlist[i]
         p.score=giveScore(passwordlist[i])
         passwordlist[i]=p
-
+    #上面这个部分很费时间
+    #print "[+]所有密码打分完毕,下面开始排序"
     return sortByScore(passwordlist)
 
 

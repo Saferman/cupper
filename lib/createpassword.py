@@ -116,9 +116,10 @@ class PasswordGenerator(object):
 
     def _GetInnerNumList(self):
         r=self._numList#前面的常量
-        for i in xrange(0,10):
-            r+=[str(i)*x for x in xrange(1,5)]#让每个0至9的数字重复1到4次
-        endyear = int(time.strftime("%Y"))
+        #for i in xrange(0,10):
+            #r+=[str(i)*x for x in xrange(1,5)]#让每个0至9的数字重复1到4次
+
+        #endyear = int(time.strftime("%Y"))
         ###是否可以考虑让用户输入年份，而不是瞎猜
         #r += [str(x) for x in range(2000, endyear+1)]#生成年份(2000年至今)
 

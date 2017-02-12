@@ -72,7 +72,7 @@ def ClearNull(PI):
 
 def print_version():
     logo()
-    print "\r\n	"+mColor.title_Color+"[ cupper.py ]  v1.0"+mColor.normal_Color+"\r\n"
+    print "\r\n	"+mColor.title_Color+"[ cupper.py ]  v2.0"+mColor.normal_Color+"\r\n"
     print "	* 作者:Saferman"
     print "	* 下载链接:https://github.com/Saferman/cupper/\r\n"
     print "     * 关于本工具更多说明或者有任何疑惑，请查阅README或者github wiki\r\n"
