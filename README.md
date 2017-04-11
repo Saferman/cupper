@@ -39,7 +39,6 @@ password_list = pg.generator()</code>
 <code>python cupper.py -h</code>  
 注意：python版本是2.x，推荐2.7~2.9.
   
-![Screenshot](https://github.com/Saferman/cupper/blob/master/images/version.png)
 
 ###展望  
 
