@@ -4,6 +4,10 @@
 
 Cupper的名字含义是be better than common user passwords profiler(cupp)。在V1.0的时候我就下定决心要把这款工具做成国内最棒的社工密码生成器，直到现在国内也没有独立的专门生成社工密码的最新工具。在经过了半年的时间终于完成了V2.0版本，相比第一版这次版本的功能有了很大的提升，日后还会持续对这个工具进行更新。希望这款工具能对你的学习和渗透测试方面起到积极作用。
 
+### 截图
+Version信息:
+![Image text](https://raw.githubusercontent.com/Saferman/cupper/master/images/version.png)  
+
 ### 功能  
 
 cupper可以实现的功能如下：
