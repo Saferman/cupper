@@ -20,7 +20,7 @@ class meaningColor:
             self.explain_Color = ''
             self.choice_Color = ''
             self.error_Color = ''
-            self.warn_Color
+            self.warn_Color  = ''
 
 
 class PersonalInformation:
