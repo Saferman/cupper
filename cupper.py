@@ -37,6 +37,7 @@ from lib.common import SessionCommandInput
 from userinput.informationInput import informationInput
 from structure.structure import *
 from session.interactiveSession import *
+from stdout.Windows_stdout import UnicodeStreamFilter
 
 
 ##定义需要的结构体数据:
@@ -136,7 +137,8 @@ def interactive():
 def main():
     reload(sys)
     sys.setdefaultencoding("utf8")
-
+    if sys.stdout.encoding == 'cp936':
+        sys.stdout = UnicodeStreamFilter(sys.stdout)
 
     parser = argparse.ArgumentParser(description="* 关于本工具更多说明或者有任何疑惑，请查阅README或者github wki")
     parser.add_argument('-f','--file',type=str,default=None,help="对密码文件进行各种处理",dest='file')
