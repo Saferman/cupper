@@ -41,7 +41,7 @@ def situationInput(mColor):
             if mode=='1':
                 pass
             if mode=='2':
-                SituationDict['2WebsiteName'] = raw_input(mColor.getInput_Color+">请输入网站全名的拼音,全小写,用空格分隔,比如:wang yi you xiang:")
+                SituationDict['2websiteName'] = raw_input(mColor.getInput_Color+">请输入网站全名的拼音,全小写,用空格分隔,比如:wang yi you xiang:")
                 SituationDict['2domainName'] = raw_input(mColor.getInput_Color+">请输入网站一级域名..之间的内容(大小写敏感),比如baidu:")
                 pass
             if mode=='3':
