@@ -33,7 +33,7 @@ def SituationHandle(SituationDict):
         if mode=='2':
             word_List,number_List = Situation2(SituationDict['2websiteName'],SituationDict['2domainName'])
             words_List += word_List
-            numsers_List += number_List
+            numbers_List += number_List
             continue 
         if mode=='3':
             continue
